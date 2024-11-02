@@ -6,3 +6,5 @@ Servers/*
 .classpath
 .project
 target/
+
+DONT_COMMIT.txt
