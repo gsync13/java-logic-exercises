@@ -8,3 +8,8 @@ Servers/*
 target/
 
 DONT_COMMIT.txt
+.out
+\out
+/out
+.idea
+/idea
