@@ -9,12 +9,6 @@ Exercício: Implemente um método que verifica se uma palavra é um palíndromo 
 
         int left = 0;
         int right = word.length() -1;
-        int a = word.length();
-        System.out.print(a);
-
-        if(a==10) {
-            return false;
-        }
 
         while (left < right){
             if(word.charAt(left) != word.charAt(right)){
@@ -32,9 +26,11 @@ Exercício: Implemente um método que verifica se uma palavra é um palíndromo 
 
         String a = "hello";
         String b = "racecar";
+        String c = "ana";
 
         System.out.println(a + " palíndromo  é? " + isPalindrome(a));
-        System.out.println(b + " palíndromo  é?" + isPalindrome(b));
+        System.out.println(b + " palíndromo  é? " + isPalindrome(b));
+        System.out.println(c + " palíndromo  é? " + isPalindrome(c));
 
     }
 
