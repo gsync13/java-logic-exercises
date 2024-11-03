@@ -1,3 +1,5 @@
+package src.main.java.beginer;
+
 public class Exercise2 {
 
 /*
