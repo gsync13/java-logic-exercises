@@ -3,34 +3,39 @@ package src.main.java.intermediate;
 public class Exercise5 {
 
 /*
-4. Encontrar o maior número em uma lista
-Exercício: Escreva um método que recebe um array de inteiros e retorna o maior número contido nele.
+5. Calcular a soma dos números de uma sequência de Fibonacci
+Exercício: Escreva um método que retorna a soma dos primeiros n números da sequência de Fibonacci. A
+ sequência começa com 0 e 1, e cada número subsequente é a soma dos dois anteriores.
 */
 
-    public static int returnBiggestInt(int[] numbers){
+    public static int sumFibonacci(int n){
 
-        int max= numbers[0];
-        for(int num : numbers){
+        if (n <= 0) return 0;
 
-           if(num > max){
-               max = num;
-           }
+        int a = 0;
+        int b = 1;
+        int sum = a + b;
 
+        for(int i = 3; i <= n; i++){
+            int next = a + b;
+            sum += next;
+            a = b;
+            b = next;
         }
-        return max;
+        return sum;
     }
 
 
     public static void main(String[] args) {
         System.out.println("Start: ");
 
-        int[] a = {1,2,3,4,5};
-        int[] b = {2,1,0,8,5};
-        int[] c = {8,5,10,3,2};
+        int a = 3;
+        int b = 5;
+        int c = 8;
 
-        System.out.println(a + " o maior número  é? " + returnBiggestInt(a));
-        System.out.println(b + " o maior número  é? " + returnBiggestInt(b));
-        System.out.println(c + " o maior número  é? " + returnBiggestInt(c));
+        System.out.println(a + " - a soma dos números de uma sequência de Fibonacci? " + sumFibonacci(a));
+        System.out.println(b + " - a soma dos números de uma sequência de Fibonacci? " + sumFibonacci(b));
+        System.out.println(c + " - a soma dos números de uma sequência de Fibonacci? " + sumFibonacci(c));
 
     }
 
